@@ -1,0 +1,28 @@
+# Linux temporary files
+*~
+*.swp
+*.swo
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Environment variables
+.env
+
+# Docker
+docker-compose.override.yml
+
+# Node
+node_modules/
+
+# Python
+__pycache__/
+*.pyc
+
+# Backup files
+*.bak
+*.tmp
