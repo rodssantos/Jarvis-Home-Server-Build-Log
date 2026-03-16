@@ -1,4 +1,4 @@
-# Jarvis Home Server Build Log
+# Jarvis Home Server Build Log - Section 1
 
 **Date:** 2026-03-15  
 **Host:** aiserver  
