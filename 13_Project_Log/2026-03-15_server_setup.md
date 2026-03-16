@@ -15,7 +15,7 @@ Installed Ubuntu Server on the dedicated AI / Home Server machine.
 
 | Disk | Purpose |
 |-----|------|
-| SSD (223GB) | Ubuntu OS |
+| SSD (223GB) | Ubuntu Server OS |
 | 2 × 6TB HDD | RAID1 Main Data Pool |
 | 2 × 1TB HDD | RAID1 Backup Pool |
 
