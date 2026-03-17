@@ -1,4 +1,3 @@
-📄 Architecture.md
 # Jarvis Home Server Architecture
 
 This document describes the architecture of the **Jarvis Home AI Server**, a self-hosted platform designed to provide:
