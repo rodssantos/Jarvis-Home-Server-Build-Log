@@ -5,12 +5,13 @@
 **OS:** Ubuntu Server  
 **Primary User:** rodrigo
 --
-Step 11 — Reverse Proxy Infrastructure (Traefik)
-Objective
+# Step 11 — Reverse Proxy Infrastructure (Traefik)
+## Objective
 
 Create a centralized routing layer so all services can be accessed using human-readable hostnames instead of ports.
 
-Example future services:
+## Example future services:
+
 
 immich.aiserver.local
 jellyfin.aiserver.local
@@ -18,36 +19,39 @@ cloud.aiserver.local
 jarvis.aiserver.local
 Traefik deployment
 
-Directory created:
+## Directory created:
 
 /docker/traefik
 
-Configuration files:
+## Configuration files:
 
 traefik.yml
 docker-compose.yml
 
-Container launched with:
+## Container launched with:
 
 docker compose up -d
 Verification
 
-Container status:
+## Container status:
 
 docker ps
 
-Expected container:
+## Expected container:
 
 traefik:v3.0
 
-Traefik dashboard confirmed working at:
+## Traefik dashboard confirmed working at:
 
 http://192.168.12.220:8080
-Step 12 — Internal DNS Resolution
 
-To allow local devices to resolve service hostnames, the Windows hosts file was modified.
 
-File:
+
+# Step 12 — Internal DNS Resolution
+
+## To allow local devices to resolve service hostnames, the Windows hosts file was modified.
+
+## File:
 
 C:\Windows\System32\drivers\etc\hosts
 
