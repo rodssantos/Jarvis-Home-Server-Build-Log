@@ -12,8 +12,8 @@ Infrastructure Setup
 → 03_Setup_Guides/Infrastructure-Setup.md
 
 Project Log  
-→ 13_Project_Log
-Architecture 
+→ 13_Project_Log 
+Architecture   
 → docs/Architecture.md
-Infrastructure Setup 
+Infrastructure Setup  
 → docs/Infrastructure-Setup.md
