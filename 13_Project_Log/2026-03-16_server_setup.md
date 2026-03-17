@@ -10,7 +10,7 @@
 
 Create a centralized routing layer so all services can be accessed using human-readable hostnames instead of ports.
 
-## Example future services:
+Example future services:
 
 
 immich.aiserver.local
@@ -19,25 +19,25 @@ cloud.aiserver.local
 jarvis.aiserver.local
 Traefik deployment
 
-## Directory created:
+Directory created:
 
 /docker/traefik
 
-## Configuration files:
+Configuration files:
 
 traefik.yml
 docker-compose.yml
 
-## Container launched with:
+Container launched with:
 
 docker compose up -d
 Verification
 
-## Container status:
+Container status:
 
 docker ps
 
-## Expected container:
+Expected container:
 
 traefik:v3.0
 
@@ -51,7 +51,7 @@ http://192.168.12.220:8080
 
 ## To allow local devices to resolve service hostnames, the Windows hosts file was modified.
 
-## File:
+File:
 
 C:\Windows\System32\drivers\etc\hosts
 
@@ -121,9 +121,9 @@ Docker network connectivity correct
 
 hostname routing functional
 
-Step 15 — Docker Network Validation
+# Step 15 — Docker Network Validation
 
-Traefik and Immich were connected to a shared Docker network:
+## Traefik and Immich were connected to a shared Docker network:
 
 proxy
 
@@ -135,7 +135,7 @@ Verified containers:
 
 traefik
 immich_server
-Step 16 — Immich Initial Configuration
+# Step 16 — Immich Initial Configuration
 
 Access URL:
 
@@ -159,7 +159,7 @@ Object Detection
 
 Machine learning currently runs on CPU (GPU acceleration planned later).
 
-Step 17 — Storage Mapping Verification
+# Step 17 — Storage Mapping Verification
 
 Docker volume mapping:
 
