@@ -14,8 +14,3 @@ Infrastructure Setup
 Project Log  
 13_Project_Log 
 
-Architecture   
-docs/Architecture.md
-
-Infrastructure Setup  
-docs/Infrastructure-Setup.md
