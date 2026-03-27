@@ -4,6 +4,8 @@
 **Host:** aiserver  
 **OS:** Ubuntu Server  
 **Primary User:** rodrigo
+Time spent = 6 hours
+
 --
 # Step 11 — Reverse Proxy Infrastructure (Traefik)
 ## Objective
