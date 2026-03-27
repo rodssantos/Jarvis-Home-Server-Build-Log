@@ -4,6 +4,7 @@
 **Host:** aiserver  
 **OS:** Ubuntu Server  
 **Primary User:** rodrigo
+
 Time spent = 6 hours
 
 --
