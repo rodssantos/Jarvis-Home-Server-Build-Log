@@ -2,6 +2,7 @@
 
 ## Session Summary
 Time spent = 6 hours
+
 This session focused on transforming a basic homepage into a **fully interactive, data-driven server dashboard** with real-time monitoring and container control capabilities.
 
 ---
