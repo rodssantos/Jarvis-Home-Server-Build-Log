@@ -124,13 +124,16 @@ Check container network (proxy)
 ---
 
 # 🔌 9. IMPORTANT PORTS
-Port      Service
-
-80        Traefik
-
-53        DNS (AdGuard)
-
-3000      AdGuard UI
+|Port|Service|
+|----|-------|
+|53|DNS (AdGuard)|
+|80|Traefik|
+|8080 | Traefik dashboard|
+|3000|AdGuard UI|
+|3001 | Homepage direct port|
+|9000 | Portainer direct port|
+|2283 | Immich direct port|
+|6333 | Qdrant direct port|
 
 ---
 
