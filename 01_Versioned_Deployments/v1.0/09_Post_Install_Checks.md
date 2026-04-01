@@ -26,7 +26,6 @@ The system should be validated in this order:
 ### Check IP Address
 
 ```
-id="ip_check"
 ip a
 ```
 Expected:
@@ -38,11 +37,11 @@ Check Internet Connectivity
 ping -c 3 google.com
 ```
 ## 💾 Storage Checks
-Check disks and mounts
+### Check disks and mounts
 ```
 lsblk -o NAME,SIZE,TYPE,FSTYPE,MOUNTPOINT
 ```
-Check RAID status
+### Check RAID status
 ```
 cat /proc/mdstat
 ```
@@ -50,16 +49,16 @@ Expected:
 ```
 [UU]
 ```
-Check mount usage
+### Check mount usage
 ```
 df -h
 ```
 Ensure:
 
-`/data` is mounted
-`/backup` is mounted
+- `/data` is mounted
+- `/backup` is mounted
 ## 🐳 Docker Checks
-Check running containers
+### Check running containers
 ```
 docker ps
 ```
@@ -75,7 +74,7 @@ Expected containers:
 - portainer
 - watchtower
 
-Check Docker networks
+### Check Docker networks
 ```
 docker network ls
 ```
@@ -86,7 +85,7 @@ Ensure:
 exists.
 
 ## 🌐 DNS Checks (AdGuard)
-Test DNS resolution (from client device)
+### Test DNS resolution (from client device)
 ```
 nslookup home.aiserver.local
 ```
@@ -94,62 +93,73 @@ Expected:
 ```
 192.168.12.220
 ```
-Test from server (manual DNS)
+### Test from server (manual DNS)
+```
 nslookup home.aiserver.local 192.168.12.220
-🚦 Traefik Checks
-Access dashboard
+```
+### 🚦 Traefik Checks
+## Access dashboard
+```
 http://192.168.12.220:8080
-
+```
 Verify:
 
-Routers exist
-Services are healthy
-Check logs
+- Routers exist
+- Services are healthy
+### Check logs
+```
 docker logs traefik
-🌍 Application Access
+```
+## 🌍 Application Access
 
 Open in browser:
 
-http://home.aiserver.local
-http://ai.aiserver.local
-http://immich.aiserver.local
-http://admin.aiserver.local
-Expected Behavior
-Service	Expected
-Homepage	Dashboard loads
-Open WebUI	Chat interface
-Immich	Login screen
-Portainer	Container UI
-🔁 End-to-End Test
+- http://home.aiserver.local
+- http://ai.aiserver.local
+- http://immich.aiserver.local
+- http://admin.aiserver.local
+### Expected Behavior
+|Service|	Expected|
+|----|-----|
+|Homepage|	Dashboard loads|
+|Open WebUI|	Chat interface|
+|Immich|	Login screen|
+|Portainer	|Container UI|
+##🔁 End-to-End Test
 
 Flow:
 
-Device → DNS → Traefik → Container
+`Device → DNS → Traefik → Container`
 
 If ALL services load → system is fully operational.
 
-⚠️ Troubleshooting Quick Checks
-❌ Domain not resolving
-Check DNS settings on device
-Ensure AdGuard is running
-❌ Page not loading
+## ⚠️ Troubleshooting Quick Checks
+### ❌ Domain not resolving
+- Check DNS settings on device
+- Ensure AdGuard is running
+### ❌ Page not loading
 Check container status:
+```
 docker ps
-❌ Traefik routing issue
-Check labels
-Check proxy network
-❌ Service crashes
+```
+###❌ Traefik routing issue
+- Check labels
+- Check proxy network
+### ❌ Service crashes
 Check logs:
+```
 docker logs <container_name>
-🧠 Health Checklist
-Component	Status
-Network	✅
-RAID	✅
-Docker	✅
-DNS	✅
-Traefik	✅
-Services	✅
-🚀 Final Validation
+```
+## 🧠 Health Checklist
+|Component	|Status|
+|------|------|
+|Network	|✅|
+|RAID	|✅|
+|Docker	|✅|
+|DNS	|✅|
+|Traefik	|✅|
+|Services	|✅|
+## 🚀 Final Validation
 
 If all checks pass:
 
@@ -157,8 +167,8 @@ If all checks pass:
 ✅ All services reachable
 ✅ Infrastructure stable
 
-🔮 Next Steps
-Enable backups
-Configure monitoring
-Add new services
-Setup remote access
+## 🔮 Next Steps
+- Enable backups
+- Configure monitoring
+- Add new services
+- Setup remote access
