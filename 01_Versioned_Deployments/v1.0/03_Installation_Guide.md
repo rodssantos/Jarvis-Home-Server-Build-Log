@@ -230,3 +230,8 @@ http://immich.aiserver.local
 # 🚀 DONE
 
 ## You now have a fully functional Jarvis AI Server.
+# 🧠 Notes
+- Traefik handles routing
+- AdGuard handles DNS
+- Docker handles services
+- RAID handles storage
