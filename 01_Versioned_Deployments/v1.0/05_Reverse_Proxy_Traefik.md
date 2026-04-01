@@ -22,7 +22,7 @@ Instead of using ports, routing is based on domain names.
 
 Traefik listens on:
 
-``` id="z8q2pl"
+```
 port 80
 ```
 Defined as:
