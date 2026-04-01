@@ -1,5 +1,5 @@
 # 🛠️ Jarvis Home AI Server — Troubleshooting (v1.0)
-
+## - Also refer to general Troubleshooting at (
 ---
 
 ## 🎯 Purpose
