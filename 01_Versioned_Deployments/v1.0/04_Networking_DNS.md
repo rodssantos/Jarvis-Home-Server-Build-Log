@@ -42,7 +42,7 @@ Docker Container (internal port)
 
 ## Static IP
 
-```yaml id="r4n8lq"
+```
 IP: 192.168.12.220
 Gateway: 192.168.12.1
 ```
