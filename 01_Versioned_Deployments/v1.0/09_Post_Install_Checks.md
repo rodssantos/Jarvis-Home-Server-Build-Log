@@ -25,61 +25,75 @@ The system should be validated in this order:
 
 ### Check IP Address
 
-```bash id="ip_check"
+```
+id="ip_check"
 ip a
-
+```
 Expected:
-
+```
 192.168.12.220
+```
 Check Internet Connectivity
+```
 ping -c 3 google.com
-💾 Storage Checks
+```
+## 💾 Storage Checks
 Check disks and mounts
+```
 lsblk -o NAME,SIZE,TYPE,FSTYPE,MOUNTPOINT
+```
 Check RAID status
+```
 cat /proc/mdstat
-
+```
 Expected:
-
+```
 [UU]
+```
 Check mount usage
+```
 df -h
-
+```
 Ensure:
 
-/data is mounted
-/backup is mounted
-🐳 Docker Checks
+`/data` is mounted
+`/backup` is mounted
+## 🐳 Docker Checks
 Check running containers
+```
 docker ps
-
+```
 Expected containers:
 
-traefik
-adguard
-homepage
-open-webui
-immich_server
-immich_machine_learning
-qdrant
-portainer
-watchtower
-Check Docker networks
-docker network ls
+- traefik
+- adguard
+- homepage
+- open-webui
+- immich_server
+- immich_machine_learning
+- qdrant
+- portainer
+- watchtower
 
+Check Docker networks
+```
+docker network ls
+```
 Ensure:
 
-proxy
+'proxy'
 
 exists.
 
-🌐 DNS Checks (AdGuard)
+## 🌐 DNS Checks (AdGuard)
 Test DNS resolution (from client device)
+```
 nslookup home.aiserver.local
-
+```
 Expected:
-
+```
 192.168.12.220
+```
 Test from server (manual DNS)
 nslookup home.aiserver.local 192.168.12.220
 🚦 Traefik Checks
