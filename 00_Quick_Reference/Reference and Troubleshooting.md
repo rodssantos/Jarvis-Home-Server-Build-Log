@@ -1,5 +1,5 @@
 # ⚡ Jarvis Server — Quick Reference
-## - Also refer to [10_Troubleshooting](../01_Versioned_Deployments/v1.0/10_Troubleshooting.md)
+## Also refer to [10_Troubleshooting](../01_Versioned_Deployments/v1.0/10_Troubleshooting.md)
 ---
 
 # 🌐 1. CORE ACCESS (USE THIS FIRST)
