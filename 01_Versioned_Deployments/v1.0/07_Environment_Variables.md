@@ -29,7 +29,6 @@ Environment variables (`.env`) are used to:
 Main environment file:
 
 ```
-id="env_path_real"
 /docker/immich/.env
 ```
 ## 📦 Immich Environment Variables
