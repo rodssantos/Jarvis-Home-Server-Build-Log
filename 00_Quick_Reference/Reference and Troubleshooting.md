@@ -1,7 +1,15 @@
 # ⚡ Jarvis Server — Quick Reference
 ## Also refer to [10_Troubleshooting](../01_Versioned_Deployments/v1.0/10_Troubleshooting.md)
 ---
-
+# Start python web server:
+```
+cd ~/jarvis-ui
+python3 -m http.server 8090
+```
+## open this in your browser:
+```
+http://192.168.12.220:8090
+```
 # 🌐 1. CORE ACCESS (USE THIS FIRST)
 
 | Service | URL |
