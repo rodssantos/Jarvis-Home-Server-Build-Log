@@ -161,9 +161,6 @@ http://192.168.12.220:8080
 ```
 # 🔁 Mental Model
 DNS → Traefik → Container
-```
-id="n4k2b7"
-```
 ---
 
 # 🚀 Summary
@@ -179,5 +176,4 @@ Traefik enables:
 
 ## 🧠 Rule of the system
 
-``` id="t1x7p4"```
 No label = No access
