@@ -33,122 +33,156 @@ Always debug in this order:
 
 #### Check
 
-```bash
+```
 nslookup home.aiserver.local 192.168.12.220
+```
 Fix
-Ensure device DNS = 192.168.12.220
-Verify AdGuard is running:
+- Ensure device DNS = 192.168.12.220
+- Verify AdGuard is running:
+```
 docker ps | grep adguard
-Confirm rewrite exists in AdGuard
-❌ Works on PC but not phone
+```
+- Confirm rewrite exists in AdGuard
+## ❌ Works on PC but not phone
 Cause
-Phone using router DNS
+- Phone using router DNS
 Fix
-Set DNS manually on device
-Or configure router DNS
-🚦 Traefik Issues
-❌ Domain resolves but page does not load
+- Set DNS manually on device
+- Or configure router DNS
+## 🚦 Traefik Issues
+### ❌ Domain resolves but page does not load
 Cause
-Traefik cannot reach container
+- Traefik cannot reach container
 Check
+```
 docker ps
 docker network inspect proxy
+```
 Fix
-Ensure container is on proxy network
-Verify labels exist
-❌ 502 Bad Gateway
+- Ensure container is on proxy network
+- Verify labels exist
+### ❌ 502 Bad Gateway
 Cause
-Wrong internal port
+- Wrong internal port
 Fix
 
 Check label:
-
+```
 traefik.http.services.<name>.loadbalancer.server.port=XXXX
-
+```
 Ensure it matches container port.
 
-❌ Container not showing in Traefik
+### ❌ Container not showing in Traefik
 Cause
-Missing label
+- Missing label
 Fix
+```
 traefik.enable=true
-🐳 Docker Issues
-❌ Container not running
+```
+## 🐳 Docker Issues
+### ❌ Container not running
 Check
+```
 docker ps -a
+```
 Fix
+```
 docker logs <container_name>
-❌ Container keeps restarting
+```
+### ❌ Container keeps restarting
 Cause
-Config error
-Missing environment variables
+- Config error
+- Missing environment variables
 Fix
+```
 docker logs <container_name>
-❌ Permission denied
+```
+### ❌ Permission denied
 Fix
+```
 sudo chown -R $USER:$USER /docker
-💾 Storage Issues
-❌ RAID degraded
+```
+## 💾 Storage Issues
+### ❌ RAID degraded
 Check
+```
 cat /proc/mdstat
+```
+If not `[UU]` → disk failure
 
-If not [UU] → disk failure
-
-❌ Mount missing
+### ❌ Mount missing
 Check
+```
 df -h
+```
 Fix
+```
 sudo mount -a
-❌ Disk not detected
+```
+### ❌ Disk not detected
 Check
+```
 lsblk
-🌍 Network Issues
-❌ No internet
+```
+## 🌍 Network Issues
+### ❌ No internet
 Check
+```
 ping -c 3 google.com
-❌ Wrong IP
+```
+### ❌ Wrong IP
 Check
+```
 ip a
-📊 AdGuard Issues
-❌ AdGuard not starting
+```
+## 📊 AdGuard Issues
+### ❌ AdGuard not starting
 Cause
-Port 53 in use
+- Port 53 in use
 Fix
+```
 sudo systemctl disable systemd-resolved
 sudo systemctl stop systemd-resolved
-❌ DNS not applied
+```
+### ❌ DNS not applied
 Fix
-Restart device
-Reconnect Wi-Fi
-Flush DNS cache
-🧠 General Debug Commands
+- Restart device
+- Reconnect Wi-Fi
+- Flush DNS cache
+## 🧠 General Debug Commands
 Check all containers
+```
 docker ps
+```
 Check logs
+```
 docker logs <container_name>
+```
 Restart stack
+```
 docker compose down
 docker compose up -d
-🔁 Mental Model
+```
+## 🔁 Mental Model
 DNS → Traefik → Docker → Service
 
 If something breaks:
 
-DNS issue → domain fails
-Traefik issue → routing fails
-Docker issue → service fails
-🚀 Quick Fix Checklist
- Container running
- Correct network (proxy)
- Traefik labels present
- DNS rewrite exists
- Ports correct
- Logs checked
-🧠 Pro Tips
-Always check logs first
-Always verify DNS before anything else
-Never assume — test each layer
-🔮 Future Improvements
-Central logging system
-Monitoring dashboard
-Alerts for failures
+- DNS issue → domain fails
+- Traefik issue → routing fails
+- Docker issue → service fails
+## 🚀 Quick Fix Checklist
+ - [ ] Container running
+ - [ ] Correct network (proxy)
+ - [ ] Traefik labels present
+ - [ ] DNS rewrite exists
+ - [ ] Ports correct
+ - [ ] Logs checked
+## 🧠 Pro Tips
+- Always check logs first
+- Always verify DNS before anything else
+- Never assume — test each layer
+## 🔮 Future Improvements
+- Central logging system
+- Monitoring dashboard
+- Alerts for failures
