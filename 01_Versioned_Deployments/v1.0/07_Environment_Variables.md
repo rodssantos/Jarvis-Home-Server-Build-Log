@@ -28,9 +28,12 @@ Environment variables (`.env`) are used to:
 
 Main environment file:
 
-```bash id="env_path_real"```
+```
+id="env_path_real"
 /docker/immich/.env
-📦 Immich Environment Variables
+```
+## 📦 Immich Environment Variables
+```
 UPLOAD_LOCATION=/data/photos/library
 
 DB_DATA_LOCATION=/docker/immich/postgres
@@ -43,55 +46,53 @@ DB_DATABASE_NAME=immich
 
 DB_HOSTNAME=immich_postgres
 REDIS_HOSTNAME=immich_redis
-🔍 Variable Breakdown
-📂 Storage
-Variable	Description
-UPLOAD_LOCATION	Where photos/videos are stored
-DB_DATA_LOCATION	PostgreSQL data directory
-🧠 Application
-Variable	Description
-IMMICH_VERSION	Docker image version
-🗄️ Database
-Variable	Description
-DB_USERNAME	Database user
-DB_PASSWORD	Database password
-DB_DATABASE_NAME	Database name
-DB_HOSTNAME	Database container
-⚡ Redis
-Variable	Description
-REDIS_HOSTNAME	Redis container
-🔐 Security Notes
+```
+## 🔍 Variable Breakdown
+### 📂 Storage
+|Variable|	Description|
+|--------|------------|
+|`UPLOAD_LOCATION`|	Where photos/videos are stored|
+|`DB_DATA_LOCATION`	|PostgreSQL data directory|
+## 🧠 Application
+|Variable|	Description|
+|`IMMICH_VERSION`|	Docker image version|
+## 🗄️ Database
+|Variable|	Description|
+|--------|-------------|
+|`DB_USERNAME`	|Database user|
+|`DB_PASSWORD`	|Database password|
+|`DB_DATABASE_NAME`	|Database name|
+|`DB_HOSTNAME`	|Database container|
+## ⚡ Redis
+|Variable|	Description|
+|----|----|
+|`REDIS_HOSTNAME`	|Redis container|
 
-⚠️ These values are sensitive:
+## 🔁 How Docker Uses .env
 
-DB_PASSWORD
-🛡️ Recommendations
-Do NOT commit .env to public GitHub
-Use placeholders in documentation:
-DB_PASSWORD=your_secure_password
-🔁 How Docker Uses .env
-
-In docker-compose.yml:
-
+In `docker-compose.yml`:
+```
 env_file:
   - .env
-
+```
 This injects variables into containers at runtime.
 
-🧠 Best Practices
-✅ Keep Variables Centralized
-Use .env instead of hardcoding values
-✅ Use Clear Naming
-Example: DB_HOSTNAME instead of HOST
-✅ Separate Concerns
-Storage variables
-Database variables
-Service variables
-✅ Version Control Strategy
-File	Action
-.env	❌ Do NOT commit
-.env.example	✅ Commit
-📄 Example .env.example
+## 🧠 Best Practices
+## ✅ Keep Variables Centralized
+- Use `.env` instead of hardcoding values
+## ✅ Use Clear Naming
+- Example: `DB_HOSTNAME` instead of `HOST`
+## ✅ Separate Concerns
+- Storage variables
+- Database variables
+- Service variables
+## ✅ Version Control Strategy
+|File|	Action|
+|---|---|
+|`.env`	|❌ Do NOT commit|
+|`.env.example`|	✅ Commit|
+## 📄 Example .env.example
+```
 UPLOAD_LOCATION=/data/photos/library
 DB_DATA_LOCATION=/docker/immich/postgres
 
@@ -103,51 +104,55 @@ DB_DATABASE_NAME=immich
 
 DB_HOSTNAME=immich_postgres
 REDIS_HOSTNAME=immich_redis
-🔄 Updating Variables
+```
+## 🔄 Updating Variables
 
-After editing .env:
-
+After editing `.env`:
+```
 docker compose down
 docker compose up -d
-⚠️ Common Issues
-❌ Changes not applied
+```
+## ⚠️ Common Issues
+## ❌ Changes not applied
 
 Cause:
 
-Container not restarted
+- Container not restarted
 
 Fix:
 
-Restart stack
-❌ Wrong paths
+- Restart stack
+## ❌ Wrong paths
 
 Cause:
 
-Incorrect mount path
+- Incorrect mount path
 
 Fix:
 
-Verify /data and /docker paths
-❌ Database connection errors
+- Verify /data and /docker paths
+## ❌ Database connection errors
 
 Cause:
 
-Wrong credentials
+- Wrong credentials
 
 Fix:
 
-Check .env values match DB container
-🧠 Mental Model
+- Check .env values match DB container
+## 🧠 Mental Model
+```
 .env → docker-compose → container runtime
-🚀 Summary
+```
+## 🚀 Summary
 
 Environment variables allow:
 
-Flexible configuration
-Secure data handling
-Easy system replication
-Cleaner compose files
-🔮 Future Improvements
-Central .env for all services
-Secret management (Vault / Docker secrets)
-Per-service environment isolation
+- Flexible configuration
+- Secure data handling
+- Easy system replication
+- Cleaner compose files
+## 🔮 Future Improvements
+- Central `.env` for all services
+- Secret management (Vault / Docker secrets)
+- Per-service environment isolation
