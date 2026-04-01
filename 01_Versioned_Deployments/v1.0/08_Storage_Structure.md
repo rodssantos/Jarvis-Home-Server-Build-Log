@@ -34,7 +34,6 @@ The system uses a hybrid storage model:
 ### Main Data Array
 
 ```
-id="raid_main"
 /dev/md0
 ```
 - Type: RAID1 (Mirror)
