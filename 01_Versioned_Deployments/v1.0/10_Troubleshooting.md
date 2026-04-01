@@ -1,5 +1,5 @@
 # 🛠️ Jarvis Home AI Server — Troubleshooting (v1.0)
-## - Also refer to general Troubleshooting at (
+## - Also refer to general Troubleshooting at [Reference and Troubleshooting](../00_Quick_Reference/Reference and Troubleshooting.md)
 ---
 
 ## 🎯 Purpose
