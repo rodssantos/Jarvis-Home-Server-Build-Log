@@ -119,55 +119,56 @@ admin.aiserver.local → 192.168.12.220
 **Cause:** Port 53 in use by `systemd-resolved`  
 **Fix:**
 - Disabled service:
-  ```bash
+  ```
   sudo systemctl disable systemd-resolved
   sudo systemctl stop systemd-resolved
 
   Replaced /etc/resolv.conf with static DNS
-❌ Issue: DNS not resolving on laptop
+  ```
+## ❌ Issue: DNS not resolving on laptop
 
-Cause: IPv6 DNS override from router
-Fix:
+**Cause:** IPv6 DNS override from router
+**Fix:**
 
 Disabled IPv6 on Wi-Fi adapter
 Forced DNS to 192.168.12.220
-❌ Issue: Traefik routes not working
+## ❌ Issue: Traefik routes not working
 
-Cause: DNS not resolving domains
-Fix: Implemented AdGuard DNS rewrites
+**Cause:** DNS not resolving domains
+**Fix:** Implemented AdGuard DNS rewrites
 
-❌ Issue: Portainer not accessible via Traefik
+## ❌ Issue: Portainer not accessible via Traefik
 
-Cause: Container not on proxy network
-Fix: Recreated container with Traefik labels and correct network
+**Cause:** Container not on proxy network
+**Fix:** Recreated container with Traefik labels and correct network
 
-✅ Final Result
-All services accessible via clean domain names
-No need for port-based access
-DNS fully centralized and controlled
-Reverse proxy routing stable
-System behaves like a unified platform
-🚀 Current Access
-Service	URL
-Dashboard	http://home.aiserver.local
+# ✅ Final Result
+- All services accessible via clean domain names
+- No need for port-based access
+- DNS fully centralized and controlled
+- Reverse proxy routing stable
+- System behaves like a unified platform
+## 🚀 Current Access
+**Service URL**
+- Dashboard	http://home.aiserver.local
 
-AI	http://ai.aiserver.local
+- AI	http://ai.aiserver.local
 
-Photos	http://immich.aiserver.local
+- Photos	http://immich.aiserver.local
 
-Admin	http://admin.aiserver.local
-🔮 Next Steps
-Phase 2 — Remote Access
-Integrate Tailscale DNS
-Enable secure external access
-Phase 3 — UX & Control Layer
-Enhance Homepage dashboard
-Add monitoring and service health
-Phase 4 — Productization
-Backup automation
-App installer system
-Multi-user support
-🧠 Summary
+- Admin	http://admin.aiserver.local
+## 🔮 Next Steps
+- **Phase 2** — Remote Access
+- Integrate Tailscale DNS
+- Enable secure external access
+- **Phase 3** — UX & Control Layer
+- Enhance Homepage dashboard
+- Add monitoring and service health
+- **Phase 4** — Productization
+- Backup automation
+- App installer system 🔥
+- Multi-user support
+## 🧠 Summary
 
 This session transformed the system from:
 
@@ -183,6 +184,6 @@ Centralized DNS control
 Clean service routing
 Modular infrastructure foundation
 
-Status: ✅ Stable
+## Status: ✅ Stable
 Ready for next phase: YES
 
