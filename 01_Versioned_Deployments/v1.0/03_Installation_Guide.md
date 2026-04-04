@@ -1,4 +1,4 @@
-# 🛠️ Jarvis Home AI Server — Installation Guide (v1.0)
+# 🛠️ FYNO — Your Private Home AI — Installation Guide (v1.0)
 
 ## 🎯 Goal
 
