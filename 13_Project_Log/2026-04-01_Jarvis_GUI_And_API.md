@@ -1,5 +1,5 @@
 Project_Log/2026-04-01_Jarvis_GUI_And_API.md
-# 🧠 Jarvis Home Server — GUI + API Integration Log
+# 🧠 FYNO — Your Private Home AI — GUI + API Integration Log
 
 **Date:** 2026-04-01  
 **Session Focus:** GUI Deployment + Backend API + Docker Control  
