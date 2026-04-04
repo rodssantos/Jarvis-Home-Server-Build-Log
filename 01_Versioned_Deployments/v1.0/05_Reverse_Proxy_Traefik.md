@@ -1,4 +1,4 @@
-# 🚦 Jarvis Home AI Server — Reverse Proxy (Traefik) (v1.0)
+# 🚦 FYNO — Your Private Home AI — Reverse Proxy (Traefik) (v1.0)
 
 ## 🎯 Purpose
 
