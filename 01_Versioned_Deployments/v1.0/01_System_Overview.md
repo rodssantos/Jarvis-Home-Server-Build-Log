@@ -1,4 +1,4 @@
-# 🧠 Jarvis Home AI Server — System Overview (v1.0)
+# 🧠 FYNO — Your Private Home AI — System Overview (v1.0)
 
 ## 🎯 Purpose
 
