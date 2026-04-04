@@ -1,4 +1,4 @@
-# 💾 Jarvis Home AI Server — Storage Structure (v1.0)
+# 💾 FYNO — Your Private Home AI — Storage Structure (v1.0)
 
 ---
 
