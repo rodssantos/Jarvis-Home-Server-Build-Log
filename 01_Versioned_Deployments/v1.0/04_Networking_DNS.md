@@ -1,4 +1,4 @@
-# 🌐 Jarvis Home AI Server — Networking & DNS (v1.0)
+# 🌐 FYNO — Your Private Home AI — Networking & DNS (v1.0)
 
 # 🎯 Purpose
 
