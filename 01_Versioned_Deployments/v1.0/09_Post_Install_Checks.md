@@ -1,4 +1,4 @@
-# ✅ Jarvis Home AI Server — Post Install Checks (v1.0)
+# ✅ FYNO — Your Private Home AI — Post Install Checks (v1.0)
 
 ---
 
