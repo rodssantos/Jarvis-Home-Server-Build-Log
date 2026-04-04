@@ -1,4 +1,4 @@
-# 🛠️ Jarvis Home AI Server — Troubleshooting (v1.0)
+# 🛠️ FYNO — Your Private Home AI — Troubleshooting (v1.0)
 
 ---
 
