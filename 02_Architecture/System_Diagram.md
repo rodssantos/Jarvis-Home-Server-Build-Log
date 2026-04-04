@@ -1,4 +1,4 @@
-# Jarvis Home Server — System Diagram
+# FYNO Private Home AI — System Diagram
 
 This diagram shows the basic architecture of the Jarvis Home Server.
 
