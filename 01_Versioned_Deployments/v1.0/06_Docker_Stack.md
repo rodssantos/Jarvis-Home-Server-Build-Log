@@ -1,4 +1,4 @@
-# 🐳 Jarvis Home AI Server — Docker Stack (v1.0)
+# 🐳 FYNO — Your Private Home AI — Docker Stack (v1.0)
 
 ## 🎯 Purpose
 
