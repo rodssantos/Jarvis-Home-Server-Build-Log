@@ -1,5 +1,5 @@
 
-# ⚙️ Jarvis Home AI Server — Requirements (v1.0)
+# ⚙️ FYNO — Your Private Home AI — Requirements (v1.0)
 
 ## 🖥️ Hardware Requirements
 
