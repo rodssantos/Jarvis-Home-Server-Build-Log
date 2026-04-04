@@ -1,4 +1,4 @@
-# ⚙️ Jarvis Home AI Server — Environment Variables (v1.0)
+# ⚙️ FYNO — Your Private Home AI — Environment Variables (v1.0)
 
 ---
 
