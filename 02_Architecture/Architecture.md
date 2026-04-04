@@ -1,4 +1,4 @@
-# Jarvis Home Server Architecture
+# FYNO Private Home AI Architecture
 
 This document describes the architecture of the **Jarvis Home AI Server**, a self-hosted platform designed to provide:
 
